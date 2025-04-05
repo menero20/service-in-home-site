@@ -2,502 +2,66 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tech In Home - Assistência Técnica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Service in Home - Em Breve</title>
   <style>
-
-    html {
-      scroll-behavior: smooth;
-}
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #004080 50%, #004080 50%);
-      color: #333;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #004080, #0059b3);
+      color: #FFD700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    header {
-  background-color: #002f6c;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra para baixo */
-}
-
-.titulo-site {
-  font-size: 1.5rem;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.titulo-site i {
-  font-size: 1.5rem;
-  color: #FFD700; /* Ou outra cor que combine com o logo */
-}
-
-    header h1 {
-      font-size: 1.8rem;
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-bottom: 40px;
     }
 
-    nav {
-      margin-left: auto;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #FFD700;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
+    p {
+      font-size: 1.3rem;
+      color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      color: #FFD700;
       font-weight: bold;
     }
 
-    .hero {
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #e6f0ff;
-    }
-
-    .slider-container {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .slider-images {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      animation: slide 9s infinite;
-    }
-
-    .slider-images img {
-      width: 600px;
-      height: 300px;
-      object-fit: cover;
-      flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .diferenciais-dupla {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px; /* <-- Espaçamento do conteúdo acima */
-  gap: 10px;
-  
-}
-
-.diferenciais {
-  flex: 1 1 45%;
-  max-width: 1200px;
-  background: linear-gradient(135deg, #004080 50%, #0059b3 50%);
-  color: white;
-  padding: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  border-radius: 5px;
-}
-
-    .diferenciais-container {
-      display: flex;
-      max-width: 1000px;
-      margin: 0 auto;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .diferenciais-img {
-  flex: 1;
-  padding: 5px;
-  background-color: #f5faff; /* Cor suave de fundo – azul bem claro */
-  border: 2px solid #cce4ff; /* Borda para destacar como um quadro */
-  border-radius: 10px; /* Cantos arredondados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-    .diferenciais-img img {
-      width: 100%;
-      border-radius: 10px;
-      max-width: 400px;
-    }
-
-    .diferenciais-texto {
-      flex: 2;
-      padding: 20px;
-    }
-
-    .diferenciais-texto h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-
-    .diferenciais-texto ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .diferenciais-texto li {
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
-
-    .whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #25D366;
-  border-radius: 50%;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.whatsapp-button:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-button img {
-  width: 40px;
-  height: 40px;
-}
-
-.destaque-amarelo {
-  color: #FFD700;
-}
-
-nav a {
-  color: #FFD700;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.menu-icones {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  display: flex;
-  gap: 20px;
-}
-
-.menu-icones a {
-  color: #FFD700;
-  font-size: 24px;
-  transition: transform 0.3s ease;
-}
-
-.menu-icones a:hover {
-  transform: scale(1.6);
-}
-
-.info-dupla {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #f5f9ff, #eaf3ff);
-}
-
-.info-box {
-  flex: 1 1 45%;
-  margin: 10px;
-  padding: 30px;
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.info-box h3 {
-  color: #002f6c;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.info-box p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.conteudo-servicos {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.texto-servicos {
-  flex: 1;
-}
-
-.texto-servicos h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #002f6c;
-}
-
-.lista-servicos {
-  list-style: none;
-  padding-left: 0;
-}
-
-.lista-servicos li {
-  margin-bottom: 12px;
-  font-size: 1rem;
-  color: #333;
-}
-
-.lista-servicos li i {
-  color: #002f6c;
-  margin-right: 10px;
-}
-
-.icone-lateral {
-  font-size: 100px;
-  color: #002f6c;
-  margin-left: 40px;
-}
-
-.avaliacoes {
-  background: linear-gradient(to right, #e0ecff, #e0ecff);
-  padding: 20px 20px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra sutil abaixo */
-}
-
-.avaliacoes h2 {
-  font-size: 2rem;
-  color: #002f6c;
+    .icon {
+  font-size: 150px; /* ou até mais se quiser */
   margin-bottom: 40px;
 }
 
-.avaliacoes-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.comentario {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  max-width: 300px;
-  flex: 1 1 250px;
-}
-
-.comentario h4 {
-  font-size: 1.1rem;
-  color: #002f6c;
-  margin-bottom: 10px;
-}
-
-.comentario p {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.estrelas {
-  color: #FFD700; /* Amarelo dourado */
-  font-size: 1.2rem;
-}
-
-
-@media (max-width: 768px) {
-  .info-box {
-    flex: 1 1 100%;
-  }
-}
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      33% { transform: translateX(-600px); }
-      66% { transform: translateX(-1200px); }
-      100% { transform: translateX(0); }
-    }
-
-    footer {
-      background-color: #002f6c;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .slider-container {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .slider-images img {
-        width: 100vw;
-        height: auto;
-      }
-    }
   </style>
 </head>
-<a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
 <body>
 
-  <header>
-    <h1 class="titulo-site">
-      <i class="fas fa-house-chimney"></i> Tech In Home
-    </h1>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <!-- Ícone representando reparo de computadores -->
+ <div class="icon">🛠️💻</div>
 
-    <nav class="menu-icones">
-      <a href="https://www.instagram.com/suaempresa" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/suaempresa" target="_blank" title="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="tel:+5511999999999" title="Telefone">
-        <i class="fas fa-phone-alt"></i>
-      </a>
-    </nav>
-  </header>
-
-  <!-- <section class="hero">
-    <div class="slider-container">
-      <div class="slider-images" id="slider">
-        <img src="destaque1.jpg" alt="Destaque 1">
-        <img src="destaque2.jpg" alt="Destaque 2">
-        <img src="destaque3.jpg" alt="Destaque 3">
-      </div>
-    </div>
-  </section> -->
-
-  <div class="diferenciais-dupla">
-    <section class="diferenciais">
-      <div class="diferenciais-container">
-        <div class="diferenciais-img">
-          <img src="card1.png" alt="Técnico em domicílio">
-        </div>
-        <div class="diferenciais-texto">
-          <h2>Por que escolher a Tech In <span class="destaque-amarelo">Home</span>?</h2>
-          <ul>
-            <li><span class="destaque-amarelo">✔</span> Atendimento direto na sua casa, com hora marcada.</li>
-            <li><span class="destaque-amarelo">✔</span> Sem levar o computador embora – resolvemos no local!</li>
-            <li><span class="destaque-amarelo">✔</span> Especialista com anos de experiência em hardware e software.</li>
-            <li><span class="destaque-amarelo">✔</span> Agilidade, segurança e transparência no serviço.</li>
-            <li><span class="destaque-amarelo">✔</span> Suporte personalizado e confiável.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  
-    <section class="diferenciais">
-      <div class="diferenciais-container">
-        <div class="diferenciais-img">
-          <img src="card2.png" alt="Criação de sites profissionais">
-        </div>
-        <div class="diferenciais-texto">
-          <h2>Por que escolher a Tech In <span class="destaque-amarelo">Web</span>?</h2>
-          <ul>
-            <li><span class="destaque-amarelo">✔</span> Criação de sites modernos, rápidos e responsivos.</li>
-            <li><span class="destaque-amarelo">✔</span> Layout personalizado com a cara do seu negócio.</li>
-            <li><span class="destaque-amarelo">✔</span> Sites otimizados para aparecer no Google (SEO).</li>
-            <li><span class="destaque-amarelo">✔</span> Integração com WhatsApp, redes sociais e mapas.</li>
-            <li><span class="destaque-amarelo">✔</span> Suporte técnico completo e atualizações pós-entrega.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </div>  
-
-  <section class="info-dupla">
-    <div class="info-box esquerda">
-      <div class="conteudo-servicos">
-        <div class="texto-servicos">
-          <h3>Serviços que oferecemos</h3>
-          <ul class="lista-servicos">
-            <li><i class="fas fa-screwdriver-wrench"></i> Manutenção de computadores e notebooks</li>
-            <li><i class="fas fa-shield-alt"></i> Formatação e instalação de sistemas</li>
-            <li><i class="fas fa-wifi"></i> Configuração de internet e Wi-Fi</li>
-            <li><i class="fas fa-virus"></i> Remoção de vírus e malwares</li>
-            <li><i class="fas fa-database"></i> Backup e recuperação de dados</li>
-            <li><i class="fas fa-laptop-code"></i> Otimização de desempenho</li>
-            <li><i class="fas fa-user-cog"></i> Suporte técnico personalizado</li>
-            <li><i class="fas fa-desktop"></i> Montagem de computadores gamer e para trabalho</li>
-          </ul>
-        </div>
-        <div class="icone-lateral">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-      </div>
-    </div>
-    <div class="info-box direita">
-      <div class="conteudo-servicos">
-        <div class="texto-servicos">
-          <h3>Horários de Atendimento</h3>
-          <ul class="lista-servicos">
-            <li><i class="fas fa-clock"></i> Segunda a Sexta: 08h às 18h</li>
-            <li><i class="fas fa-bolt"></i> Atendimento emergencial fora do horário com agendamento</li>
-            <li><i class="fas fa-home"></i> Atendimento no conforto da sua casa</li>
-            <li><i class="fas fa-phone"></i> Suporte rápido via WhatsApp</li>
-          </ul>
-        </div>
-        <div class="icone-lateral">
-          <i class="fas fa-headset"></i>
-        </div>
-      </div>
-    </div>          
-  </section>
-  
-  <section class="avaliacoes">
-    <h2>O que dizem nossos clientes</h2>
-    <div class="avaliacoes-container">
-      
-      <div class="comentario">
-        <h4>Maria Silva</h4>
-        <p>O atendimento foi rápido e eficiente. Meu notebook voltou a funcionar como novo!</p>
-        <div class="estrelas">★★★★★</div>
-      </div>
-      
-      <div class="comentario">
-        <h4>João Pedro</h4>
-        <p>Gostei muito do suporte em casa, resolveu tudo sem precisar levar meu PC!</p>
-        <div class="estrelas">★★★★★</div>
-      </div>
-  
-      <div class="comentario">
-        <h4>Ana Paula</h4>
-        <p>Montou meu computador gamer com perfeição. Super recomendo!</p>
-        <div class="estrelas">★★★★★</div>
-      </div>
-  
-      <div class="comentario">
-        <h4>Lucas Martins</h4>
-        <p>Serviço confiável, transparente e com preço justo. Voltarei a chamar com certeza.</p>
-        <div class="estrelas">★★★★★</div>
-      </div>
-  
-    </div>
-  </section>  
-
-  <footer>
-    <p>&copy; 2025 Tech em Home - Todos os direitos reservados</p>
-  </footer>
+  <h1>Estamos preparando algo incrível!</h1>
+  <p>
+    Um novo jeito de cuidar da sua tecnologia no conforto da sua casa.<br> <br>
+    Praticidade, agilidade e confiança com quem entende do assunto.<br><br>
+    <span class="highlight">Aguardem, em breve no ar!</span>
+  </p>
 
 </body>
 </html>
